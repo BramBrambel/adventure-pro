@@ -1,44 +1,11 @@
 ---
-import "../styles/global.css";
+import MainLayout from "../layouts/MainLayout.astro";
 import { Image} from "astro:assets";
-import hero from "../images/logo.jpg";
+import hero from "../images/hero_photo.png";
+import irickchat from "../images/photo5.png";
+import lake from "..//images/lake.jpg";
 ---
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.js"
-      integrity="sha512-BJ/5sR2hFxQTKin/55JQCcMTObShDBAmVjL/3NR/MVcrhyOazJjAgvROem03+HYyGw16SVdSfoWCFGr9syxAKA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <title>Adventure Blog</title>
-  </head>
-  <body class="">
-
-
-<header class="lg:px-16 px-4 bg-gray-100 flex flex-wrap items-center py-4 shadow-md">
-    <div class="flex-1 flex justify-between items-center">
-        <a href="#" class="text-xl">Outside</a>
-    </div>
-	
-  
-    
-    <div class="hidden md:flex md:items-center md:w-auto w-full" id="menu">
-        <nav>
-            <ul class="md:flex items-center justify-between text-base text-gray-700 pt-4 md:pt-0">
-                <li><a class="md:p-4 py-3 px-0 block" href="/about/">About</a></li>
-                <li><a class="md:p-4 py-3 px-0 block" href="#">Treatments</a></li>
-                <li><a class="md:p-4 py-3 px-0 block" href="#">Blog</a></li>
-                <li><a class="md:p-4 py-3 px-0 block md:mb-0 mb-2" href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-<section class="w-full bg-gray-100">
+<MainLayout>
 <div
     class="px-7 lg:px-10 max-w-6xl mx-auto flex flex-col gap-y-10 lg:flex-row items-center gap-x-10 justify-center py-10 lg:py-14 dark:bg-gray-800">
     <div class="lg:w-[650px] lg:px-5 flex flex-col gap-y-5">
@@ -69,11 +36,9 @@ import hero from "../images/logo.jpg";
     </div>
 
 
-</section>
 
-<section class="bg-gray-100 dark:bg-gray-900">
     <!-- Title Section -->
-    <div class="text-center py-10">
+    <div class="text-center py-10 bg-gray-100 dark:bg-gray-900">
       <h1 class="text-4xl font-bold text-black dark:text-white mb-4">Discover New Adventures</h1>
       <p class="text-lg text-gray-600 dark:text-gray-400">Explore, discover, and find inspiration through these exciting journeys.</p>
     </div>
@@ -83,32 +48,32 @@ import hero from "../images/logo.jpg";
       <div class="grid gap-x-8 gap-y-12 sm:gap-y-16 md:grid-cols-2 lg:grid-cols-3">
         <div class="relative">
           <a href="#_" class="block overflow-hidden group rounded-xl shadow-lg">
-            <Image src={hero} class="object-cover w-full h-56 transition-all duration-300 ease-out sm:h-64 group-hover:scale-110" alt="Adventure">
+            <Image src={irickchat} class="object-cover w-full h-56 transition-all duration-300 ease-out sm:h-64 group-hover:scale-110" alt="Adventure">
           </a>
           <div class="relative mt-5">
             <p class="uppercase font-semibold text-xs mb-2.5 text-purple-600">September 10th 2023</p>
             <a href="#" class="block mb-3 hover:underline">
               <h2 class="text-2xl font-bold leading-5 text-black dark:text-white transition-colors duration-200 hover:text-purple-700 dark:hover:text-purple-400">
-                Journey to the Mountains
+                Гора Рыжий бугор 3762м н.м.
               </h2>
             </a>
-            <p class="mb-4 text-gray-700 dark:text-gray-300">Escape the hustle and explore the serene beauty of the mountains. Discover the peace and adventure that awaits.</p>
+            <p class="mb-4 text-gray-700 dark:text-gray-300">Треккинг на г.Рыжий Бугор через ущелье Ирик Чат </p>
             <a href="#_" class="font-medium underline text-purple-600 dark:text-purple-400">Read More</a>
           </div>
         </div>
   
         <div class="relative">
           <a href="#" class="block overflow-hidden group rounded-xl shadow-lg">
-            <Image src={hero} class="object-cover w-full h-56 transition-all duration-300 ease-out sm:h-64 group-hover:scale-110" alt="Ocean">
+            <Image src={lake} class="object-cover w-full h-56 transition-all duration-300 ease-out sm:h-64 group-hover:scale-110" alt="Ocean">
           </a>
           <div class="relative mt-5">
             <p class="uppercase font-semibold text-xs mb-2.5 text-purple-600">September 15th 2023</p>
             <a href="#" class="block mb-3 hover:underline">
               <h2 class="text-2xl font-bold leading-5 text-black dark:text-white transition-colors duration-200 hover:text-purple-700 dark:hover:text-purple-400">
-                Explore the Deep Oceans
+                Озеро Сылтранкель 3200м н.м.
               </h2>
             </a>
-            <p class="mb-4 text-gray-700 dark:text-gray-300">Dive into the deep oceans and explore the beauty and mystery of the underwater world. A truly unforgettable experience.</p>
+            <p class="mb-4 text-gray-700 dark:text-gray-300">Треккинг к озеру от села Верхний Баксан 19км. Набор высоты 1700 м </p>
             <a href="#" class="font-medium underline text-purple-600 dark:text-purple-400">Read More</a>
           </div>
         </div>
@@ -121,30 +86,18 @@ import hero from "../images/logo.jpg";
             <p class="uppercase font-semibold text-xs mb-2.5 text-purple-600">October 5th 2023</p>
             <a href="#" class="block mb-3 hover:underline">
               <h2 class="text-2xl font-bold leading-5 text-black dark:text-white transition-colors duration-200 hover:text-purple-700 dark:hover:text-purple-400">
-                Desert Safari
+                Пик Кахиани 3367м н.м.
               </h2>
             </a>
-            <p class="mb-4 text-gray-700 dark:text-gray-300">Venture into the heart of the desert and experience the thrill of a safari amidst the dunes.</p>
+            <p class="mb-4 text-gray-700 dark:text-gray-300">Маршрут от поляны Чегет 9км набор высоты 1250м</p>
             <a href="#" class="font-medium underline text-purple-600 dark:text-purple-400">Read More</a>
           </div>
         </div>
+
+
+       
+
+
       </div>
     </div>
-  </section>
- 
-  <footer class="  flex flex-col space-y-10 justify-center m-10">
-
-    <nav class="flex justify-center flex-wrap gap-6 text-gray-500 font-medium">
-        <a class="hover:text-gray-900" href="#">Home</a>
-        <a class="hover:text-gray-900" href="#">About</a>
-        <a class="hover:text-gray-900" href="#">Services</a>
-        <a class="hover:text-gray-900" href="#">Media</a>
-        <a class="hover:text-gray-900" href="#">Gallery</a>
-        <a class="hover:text-gray-900" href="#">Contact</a>
-    </nav>
-
-   
-    <p class="text-center text-gray-700 font-medium">&copy; 2025 Company Ltd. All rights reservered.</p>
-</footer>
-</body>
-</html>
+  </MainLayout>

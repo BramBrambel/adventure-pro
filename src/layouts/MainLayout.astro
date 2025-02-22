@@ -1,0 +1,60 @@
+---
+import "../styles/global.css";
+
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.js"
+      integrity="sha512-BJ/5sR2hFxQTKin/55JQCcMTObShDBAmVjL/3NR/MVcrhyOazJjAgvROem03+HYyGw16SVdSfoWCFGr9syxAKA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <title>Adventure Blog</title>
+  </head>
+  <body class="">
+
+
+<header class="lg:px-16 px-4 bg-gray-100 flex flex-wrap items-center py-4 shadow-md">
+    <div class="flex-1 flex justify-between items-center">
+        <a href="#" class="text-xl">OUTSIDE</a>
+    </div>
+	
+  
+    
+    <div class="hidden md:flex md:items-center md:w-auto w-full" id="menu">
+        <nav>
+            <ul class="md:flex items-center justify-between text-base text-gray-700 pt-4 md:pt-0">
+                <li><a class="md:p-4 py-3 px-0 block" href="/">Home</a></li>
+                <li><a class="md:p-4 py-3 px-0 block" href="/articles/">Adventure</a></li>
+                <li><a class="md:p-4 py-3 px-0 block" href="/blog/">Blog</a></li>
+                <li><a class="md:p-4 py-3 px-0 block" href="/gallery/">Gallery</a></li>
+                <li><a class="md:p-4 py-3 px-0 block md:mb-0 mb-2" href="/about/">About</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<section class="w-full bg-gray-100">
+<slot/>
+</section>
+ 
+<footer class="  flex flex-col space-y-10 justify-center m-10">
+
+  <nav class="flex justify-center flex-wrap gap-6 text-gray-500 font-medium">
+      <a class="hover:text-gray-900" href="#">Home</a>
+      <a class="hover:text-gray-900" href="#">Adventure</a>
+      <a class="hover:text-gray-900" href="#">Blog</a>
+      <a class="hover:text-gray-900" href="#">Gallery</a>
+      <a class="hover:text-gray-900" href="#">About</a>
+     
+  </nav>
+
+ 
+  <p class="text-center text-gray-700 font-medium">&copy; 2025 Project Ltd. All rights reservered.</p>
+</footer>
+</body>
+</html>
